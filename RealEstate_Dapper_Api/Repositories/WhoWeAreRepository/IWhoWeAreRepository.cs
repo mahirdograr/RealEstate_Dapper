@@ -1,0 +1,17 @@
+﻿using RealEstate_Dapper_Api.Dtos.WhoWeAreDetailDtos;
+
+namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
+{
+    public interface IWhoWeAreRepository
+    {
+        Task<List<WhoWeAreDetailDtos>> GetAllWhoWeAreDetailAsync();
+
+        void CreateWhoWeAreDetail(CreateWhoWeAreDetailDto createWhoWeAreDetailDto);
+
+        void DeleteWhoWeAreDetail(int id);
+
+        void UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto   updateWhoWeAreDetailDto);
+
+        Task<List<GetByWhoWeAreDetailDto>> GetWhoWeAreDetail(int id);
+    }
+}
